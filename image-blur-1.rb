@@ -7,7 +7,12 @@ class Image
   end
 
   def output_image
-    puts self.inspect
+    image.each do |i|
+      i.each do |cell|
+        print cell
+      end
+      puts
+    end
   end
 
 end
