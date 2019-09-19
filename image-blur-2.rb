@@ -7,8 +7,9 @@ class Image
   end
 
   def blur
+    
   end
-
+  
   def output_image
     image.each do |i|
       i.each do |cell|
