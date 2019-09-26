@@ -6,10 +6,7 @@ class Image
     self.image = image
   end
 
-  def blur
-  end
-
-  def output_image
+    def output_image
     image.each do |i|
       i.each do |cell|
         print cell
