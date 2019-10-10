@@ -34,11 +34,12 @@ class Image
     return one_pixel
   end
 
-  def transform
-    array_coords = find_ones
-
-    array_coords.each do |x, y|
-      blur(x, y)
+  def transform (distance)
+    distance.times do
+      array_coords = find_ones
+      array_coords.each do |x, y|
+        blur(x, y)
+      end
     end
   end
 
@@ -47,8 +48,9 @@ end
 image = Image.new([
   [0, 0, 0, 0],
   [0, 1, 0, 0],
-  [0, 0, 0, 1],
+  [0, 0, 0, 0],
   [0, 0, 0, 0]])
-
-image.transform
+image.output_image
+puts '-'
+image.transform(2)
 image.output_image
